@@ -102,3 +102,43 @@ XIL API .NET:
     readValue = maPort.Read(turnSignalLever)
     print readValue.Value
     maPort.Write(turnSignalLever, testbench.ValueFactory.CreateFloatValue(1.0)) 
+
+## Working with PyCANape
+
+Fully compatible with [PyCANape](https://github.com/jedediahfrey/PyCANape/blob/master/README.md). This allows you to run data analysis on your [Vector CANape and dSpace data concurrently](https://github.com/jedediahfrey/PyCANape/blob/master/README.md). Use any [Python testing framework](https://wiki.python.org/moin/PythonTestingToolsTaxonomy) to automate any hardware or software in the loop testing.
+
+# Simple Example
+
+    import CANape
+    import rtplib3 as rtplib2
+   
+   
+    # Setup dSpace
+    platformIdentifier = "ds1005"
+    applicationPath = r"C:\Path\To\MyApplication.sdf"
+    appl = rtplib2.Appl(applicationPath, platformIdentifier)
+    
+    # Setup CANape
+    canape = CANape.CANape()
+    
+    # Set dSpace Value
+    turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"
+    turnSignalLeverVar = 0
+    
+    # Start CAnape 
+    canape.start_measurement()
+    
+    # Test to make sure they are equal.
+    # Test that the value was set by reading it back
+    assert(0, turnSignalLeverVar)
+    # Test that CANape read the change
+    assert(0, canape.read_calibration_object(0, 'TurnSignalLever', 1))
+    
+    # Generate Sinewave in Python for swept sine analysis.
+    t1 = t2 = time()
+    amplitude = 1
+    offset = 1
+    frequency = 1
+    while t2-t1<10:
+        t2 = time()
+        turnSignalLeverVar = amplitude * np.sin(t2*(2*np.pi*frequency)) + offset

@@ -67,7 +67,7 @@ XIL API .NET:
     maPortConfig = maPort.LoadConfiguration(maPortConfigFilePath)
     maPort.Configure(maPortConfig, False) 
     
- ## Reading and Writing Values 
+## Reading and Writing Values 
     
 rptlib2:
 
@@ -85,7 +85,7 @@ rptlib2:
     print readValue
     turnSignalLeverVar.Write(1.0) 
     
- **rptlib3**2:
+ **rptlib3** w/sugar:
  Since rtplib3 is an abstraction, you can use [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) to simplify new code bases.
  
     turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"

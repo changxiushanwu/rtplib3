@@ -25,7 +25,7 @@ See Also: [Paying Down Your Technical Debt](https://blog.codinghorror.com/paying
 
 # Examples:
 
-Creating and Configuring MAPorts
+## Creating and Configuring MAPorts
 
 rtplib2:
 
@@ -58,11 +58,45 @@ XIL API .NET:
     # import XIL API .NET classes from the .NET assemblies
     from ASAM.XIL.Implementation.TestbenchFactory.Testbench import TestbenchFactory
     from ASAM.XIL.Interfaces.Testbench.Common.Error import TestbenchPortException 
-
+    
+    testbenchFactory = TestbenchFactory()
+    testbench = testbenchFactory.CreateVendorSpecificTestbench("dSPACE GmbH", "XIL API", "2015-B");
+    
     maPortConfigFilePath = r"..\MAPortConfiguration.xml"
     maPort = testbench.MAPortFactory.CreateMAPort("DemoMAPort")
     maPortConfig = maPort.LoadConfiguration(maPortConfigFilePath)
     maPort.Configure(maPortConfig, False) 
     
-    testbenchFactory = TestbenchFactory()
-    testbench = testbenchFactory.CreateVendorSpecificTestbench("dSPACE GmbH", "XIL API", "2015-B"); 
+ ## Reading and Writing Values 
+    
+rptlib2:
+
+    turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"
+    turnSignalLeverVar = appl.Variable(turnSignalLever)
+    readValue = turnSignalLeverVar.Read()
+    print readValue
+    turnSignalLeverVar.Write(1.0)
+    
+**rptlib3**:
+
+    turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"
+    turnSignalLeverVar = appl.Variable(turnSignalLever)
+    readValue = turnSignalLeverVar.Read()
+    print readValue
+    turnSignalLeverVar.Write(1.0) 
+    
+ **rptlib3**2:
+ Since rtplib3 is an abstraction, you can use [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) to simplify new code bases.
+ 
+    turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"
+    turnSignalLeverVar = appl.Variable(turnSignalLever)
+    print turnSignalLeverVar
+    turnSignalLeverVar = 1.0
+    
+XIL API .NET:
+(*Since XIL API is a .NET module, all numbers must be cast to .NET types before use*)
+
+    turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"
+    readValue = maPort.Read(turnSignalLever)
+    print readValue.Value
+    maPort.Write(turnSignalLever, testbench.ValueFactory.CreateFloatValue(1.0)) 

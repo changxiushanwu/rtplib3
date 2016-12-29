@@ -17,11 +17,9 @@ dSpace doesn't actually support Windows 10 *yet*:
 *Beginning with dSPACE Release 2017-A dSPACE products will generally support Windows 10.*
 *dSPACE will support only the 64-bit Professional and Enterprise editions of Windows 10.* - [Windows 10 Support of dSPACE Products](https://www.dspace.com/en/inc/home/support/supvers/supverscompm/release_roadmap/win10.cfm)
 
-dSpace has exposed multiple programming interfaces for automation. [rtplib2 (Python) is discontinued and will be distributed for the last time with dSPACE Release 2016-A.](https://www.dspace.com/en/inc/home/support/kb/supkbspecial/kbta/rtplib2xilapinetmaport.cfm). It was first replaced by the HIL API MAPort then by the XIL API .NET. 
+In the past dSpace has exposed multiple programming interfaces for automation, rtplib2 for Python and mlib and Matlablib2 for MATLAB. [rtplib2 is discontinued and will be distributed for the last time with dSPACE Release 2016-A.](https://www.dspace.com/en/inc/home/support/kb/supkbspecial/kbta/rtplib2xilapinetmaport.cfm). [dSPACE Release 2013-B was the last release comprising MLIB.](https://www.dspace.com/en/inc/home/support/kb/supkbspecial/kbta/mlibxilapimig.cfm)
 
 There is a [rtplib2 to XIL API migration guide](https://www.dspace.com/support/patches/TASC/PAPI/RTPLIB2_XIL_API_PythonNET_Migration_Guide.pdf) however it is non-trivial and there is a large existing code base of rtplib2 Python scripts running dSpace anywhere dSpace is sold.
-
-HIL API MAPort was a short lived program interface. There is also a [HIL API MAPort Python to XIL API MAPort .NET Migration Guide](https://www.dspace.com/en/pub/home/support/kb/supkbspecial/kbta/hilapimaportpythonxilapimig.cfm).
 
 See Also: [Paying Down Your Technical Debt](https://blog.codinghorror.com/paying-down-your-technical-debt/)
 

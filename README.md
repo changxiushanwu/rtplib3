@@ -86,6 +86,7 @@ rptlib2:
     turnSignalLeverVar.Write(1.0) 
     
  **rptlib3** w/sugar:
+ 
  Since rtplib3 is an abstraction, you can use [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) to simplify new code bases.
  
     turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"
@@ -94,6 +95,7 @@ rptlib2:
     turnSignalLeverVar = 1.0
     
 XIL API .NET:
+
 (*Since XIL API is a .NET module, all numbers must be cast to .NET types before use*)
 
     turnSignalLever = "Model Root/TurnSignalLever[-1..1]/Value"

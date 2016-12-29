@@ -1,12 +1,10 @@
 # rtplib3
 
-Drop in replacement for dSpace's rtplib2.
-
-**rtplib3** offers a drop in high level abstraction for rtplib2, HIL API MAPort Python and XIL API .NET MAPort
+**rtplib3** offers a high level Python drop module for rtplib2 that is compatible with HIL API MAPort Python and XIL API .NET MAPort. It does this by hiding the [rtplib2 to XIL API migration guide](https://www.dspace.com/support/patches/TASC/PAPI/RTPLIB2_XIL_API_PythonNET_Migration_Guide.pdf) behind a layer of abstraction.
 
 # Why?
 
-Executive Summary: Combination of Windows, dSpace and Matlab compatibilities are going to make a lot of current running code obsolete. Any scripts using rtplib2 or HIL API MAPort interfaces will no longer work once machines are upgraded to Windows 10.
+Executive Summary: Combination of Windows, dSpace and Matlab compatibilities are going to make a lot of current running code obsolete. Any scripts using rtplib2 or HIL API MAPort interfaces might no longer work once machines are upgraded to Windows 10.
 
 Microsoft's main stream support for [Windows 7 ended January 13, 2015 and extended support ends January 14, 2020.](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet).
 

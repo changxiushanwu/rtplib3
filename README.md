@@ -107,12 +107,10 @@ XIL API .NET:
 
 Fully compatible with [PyCANape](https://github.com/jedediahfrey/PyCANape/blob/master/README.md). This allows you to run data analysis on your [Vector CANape and dSpace data concurrently](https://github.com/jedediahfrey/PyCANape/blob/master/README.md). Use any [Python testing framework](https://wiki.python.org/moin/PythonTestingToolsTaxonomy) to automate any hardware or software in the loop testing.
 
-# Simple Example
-
+    # Imports
     import CANape
     import rtplib3 as rtplib2
-   
-   
+    
     # Setup dSpace
     platformIdentifier = "ds1005"
     applicationPath = r"C:\Path\To\MyApplication.sdf"
@@ -140,5 +138,6 @@ Fully compatible with [PyCANape](https://github.com/jedediahfrey/PyCANape/blob/m
     offset = 1
     frequency = 1
     while t2-t1<10:
-        t2 = time()
         turnSignalLeverVar = amplitude * np.sin(t2*(2*np.pi*frequency)) + offset
+        sleep(0.5)
+        t2 = time()

@@ -10,10 +10,12 @@ Microsoft's main stream support for [Windows 7 ended January 13, 2015 and extend
 
 dSpace doesn't actually support Windows 10 *yet*:
 
-*With dSPACE Release 2016-B TargetLink and Model Compare will support Windows 10.
-Full qualified support of Windows 10 for the complete dSPACE Release 2016-B will be granted by means of a service pack available mid 2017.
-Beginning with dSPACE Release 2017-A dSPACE products will generally support Windows 10.
-dSPACE will support only the 64-bit Professional and Enterprise editions of Windows 10.* - [Windows 10 Support of dSPACE Products](https://www.dspace.com/en/inc/home/support/supvers/supverscompm/release_roadmap/win10.cfm)
+*With dSPACE Release 2016-B TargetLink and Model Compare will support Windows 10.*
+
+*Full qualified support of Windows 10 for the complete dSPACE Release 2016-B will be granted by means of a service pack available mid 2017.*
+
+*Beginning with dSPACE Release 2017-A dSPACE products will generally support Windows 10.*
+*dSPACE will support only the 64-bit Professional and Enterprise editions of Windows 10.* - [Windows 10 Support of dSPACE Products](https://www.dspace.com/en/inc/home/support/supvers/supverscompm/release_roadmap/win10.cfm)
 
 dSpace has exposed multiple programming interfaces for automation. [rtplib2 (Python) is discontinued and will be distributed for the last time with dSPACE Release 2016-A.](https://www.dspace.com/en/inc/home/support/kb/supkbspecial/kbta/rtplib2xilapinetmaport.cfm). It was first replaced by the HIL API MAPort then by the XIL API .NET. 
 

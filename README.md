@@ -85,7 +85,7 @@ rptlib2:
     print readValue
     turnSignalLeverVar.Write(1.0) 
     
- **rptlib3** w/sugar:
+ **rptlib3** w/syntactic sugar:
  
  Since rtplib3 is an abstraction, you can use [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) to simplify new code bases.
  
